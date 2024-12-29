@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <section>
+        <h2>Manage Fighters</h2>
+        <form id="fighterForm">
+            <input type="text" id="fighterName" placeholder="Name" required>
+            <input type="file" id="fighterImage" accept="image/*" required>
+            <input type="text" id="fighterRecord" placeholder="Record (e.g., 5-0)" required>
+            <input type="text" id="fighterGym" placeholder="Gym" required>
+            <input type="text" id="fighterStyle" placeholder="Style" required>
+            <input type="text" id="fighterHighlights" placeholder="Highlights URL" required>
+            <button type="submit">Add Fighter</button>
+        </form>        
+        <div id="fighterList"></div>
+    </section>
+
+    <section>
+        <h2>Manage Events</h2>
+        <form id="eventForm">
+            <input type="text" id="eventName" placeholder="Event Name" required>
+            <input type="text" id="eventDate" placeholder="Date" required>
+            <input type="text" id="eventLocation" placeholder="Location" required>
+            <button type="submit">Add Event</button>
+        </form>
+        <div id="eventList"></div>
+    </section>
+
+    <script src="admin-dashboard.js"></script>
+</body>
+</html>

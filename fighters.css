@@ -1,0 +1,182 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #111;
+}
+
+.header .logo img {
+    height: 50px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav ul li {
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: gold;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav ul li a.active {
+    text-decoration: underline;
+    color: red;
+}
+
+.nav ul li a:hover {
+    color: red;
+}
+
+/* Page Title */
+.page-title {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    margin-bottom: 20px;
+}
+
+.page-title h1 {
+    color: gold;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.page-title p {
+    color: #aaa;
+    font-size: 1.2rem;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 80%;
+    max-width: 600px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid gold;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+}
+
+.search-bar input::placeholder {
+    color: #888;
+}
+
+/* Fighters Grid */
+.fighters-grid-container {
+    padding: 20px;
+    background-color: #111;
+}
+
+.fighters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.fighter-card {
+    background-color: #1a1a1a;
+    border: 1px solid gold;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.fighter-card a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Keep the default color */
+    display: block; /* Ensure the entire card is clickable */
+}
+
+.fighter-card a:hover {
+    color: gold; /* Add a hover effect for better UI */
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
+.fighter-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.fighter-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid gold;
+}
+
+.fighter-info {
+    padding: 15px;
+}
+
+.fighter-info h3 {
+    font-size: 1.5rem;
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.fighter-info p {
+    font-size: 1rem;
+    color: #ddd;
+    margin: 5px 0;
+}
+
+/* Footer */
+.footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #111;
+}
+
+.footer a {
+    color: gold;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.no-results {
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    border: 1px solid gold;
+    margin-top: 20px;
+}

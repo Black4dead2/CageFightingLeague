@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFL - Home</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.webp" alt="CFL Logo">
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="fighters.html">Fighters</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="images/hero.webp" alt="CFL Hero Image" class="hero-image">
+            <div class="hero-content">
+                <h1>Welcome to CFL</h1>
+                <p>The biggest MMA organization in the Middle East</p>
+                <a href="#events" class="button">Buy Tickets</a>
+            </div>
+        </section>
+        
+        <!-- Fighters Preview Section -->
+        <section id="fighters" class="fighters-preview">
+            <h2>Our Fighters</h2>
+            <div class="fighter-grid">
+                <div class="fighter-card">
+                    <img src="images/Namo.jpg" alt="Namo Fazil">
+                    <h3>Namo Fazil</h3>
+                    <p>Record: 7-1</p>
+                </div>
+                <div class="fighter-card">
+                    <img src="images/ismail5.jpg" alt="Zaman Ismail">
+                    <h3>Zaman Ismail</h3>
+                    <p>Record: 6-0</p>
+                </div>
+                <div class="fighter-card">
+                    <img src="images/Hardy.jpg" alt="Hardy Farhad">
+                    <h3>Hardy Farhad</h3>
+                    <p>Record: 0-10</p>
+                </div>
+            </div>
+            <a href="fighters.html" class="button">View All Fighters</a>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <p>Contact us at black4dead204@gmail.com</p>
+        <p>Follow us on Instagram: <a href="https://www.instagram.com/cage_fighting_league" target="_blank">cage_fighting_league</a></p>
+    </footer>
+  <script>// Function to render fighters with animation
+    function renderFighters(filteredFighters) {
+        fightersGrid.innerHTML = ""; // Clear existing fighters
+        filteredFighters.forEach((fighter, index) => {
+            const card = document.createElement("div");
+            card.classList.add("fighter-card");
+            card.style.animation = fadeIn 0.6s ease-out ${index * 0.1}s forwards; // Delayed animation for each card
+    
+            card.innerHTML = 
+                <img src="${fighter.image}" alt="${fighter.name}">
+                <div class="fighter-info">
+                    <h3>${fighter.name}</h3>
+                    <p>Record: ${fighter.record}</p>
+                    <p>Gym: ${fighter.gym}</p>
+                    <p>Style: ${fighter.style}</p>
+                    <a href="#">View Profile</a>
+                </div>
+            ;
+    
+            fightersGrid.appendChild(card);
+        });
+    }
+    
+    // Initial render of all fighters
+    renderFighters(fighters);
+    </script>
+</body>
+</html>

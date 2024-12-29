@@ -1,0 +1,140 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: white;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #111;
+}
+
+.header .logo img {
+    height: 50px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav ul li {
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: gold;
+    font-weight: bold;
+}
+
+.nav ul li a.active {
+    color: red;
+}
+
+.nav ul li a:hover {
+    color: red;
+}
+
+/* Events Section */
+
+/* Event Card Thumbnail */
+.event-thumbnail {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; /* Ensures the image fits nicely within the card */
+    border-bottom: 2px solid gold; /* Separate thumbnail from text */
+    border-radius: 10px 10px 0 0; /* Rounded corners for top of the card */
+    transition: transform 0.3s ease; /* Animation for hover effect */
+}
+
+.event-card:hover .event-thumbnail {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.events-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.events-section h1 {
+    font-size: 2.5rem;
+    color: gold;
+    margin-bottom: 20px;
+}
+
+.events-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.event-card {
+    background-color: #1a1a1a;
+    border: 1px solid gold;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.event-card h3 {
+    color: gold;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    margin: 5px 0;
+    color: #ddd;
+}
+
+.event-card .button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: gold;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.event-card .button:hover {
+    background-color: red;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #111;
+    color: gold;
+}
+
+.footer a {
+    color: gold;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: red;
+}
